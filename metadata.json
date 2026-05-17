@@ -1,0 +1,8 @@
+ {
+  "name": "Muntasir Rahman Portfolio",
+  "description": "A professional portfolio for Muntasir Rahman, an ACCA Part Qualified specialist in Finance & Accounting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

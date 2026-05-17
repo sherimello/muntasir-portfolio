@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #1a1a1a;
+  --color-accent: #1a1a1a;
+  
+  --color-canvas: #F9F7F2;
+  --color-ink: #1a1a1a;
+}
+
+.dark {
+  --color-canvas: #121212;
+  --color-ink: #F9F7F2;
+}
+
+@layer base {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply font-sans antialiased transition-colors duration-300;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 px-6 sm:px-12 lg:px-24;
+  }
+
+  .editorial-card {
+    @apply bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-[#1a1a1a]/10 dark:border-white/10 rounded-lg shadow-none;
+  }
+
+  .label-text {
+    @apply text-[10px] uppercase tracking-[0.3em] font-bold opacity-60;
+  }
+}
+
+@layer utilities {
+  .text-editorial {
+    @apply font-heading italic tracking-tight;
+  }
+}
