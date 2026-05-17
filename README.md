@@ -18,4 +18,3 @@ View your app in AI Studio: https://ai.studio/apps/77b43e12-4b8c-4485-90e4-ce26c
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
-"# muntasir-portfolio" 
